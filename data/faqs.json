@@ -1,0 +1,314 @@
+[
+  {
+    "id": "order-track",
+    "category": "Orders & Tracking",
+    "question": "How can I track my order status?",
+    "alternate_questions": [
+      "Where is my package?",
+      "How do I check the delivery status of my order?",
+      "Can I track my shipment online?",
+      "Find my order location"
+    ],
+    "answer": "You can track your order by going to the 'My Orders' section in your account dashboard and clicking on 'Track Package'. We also send an email and SMS with a live carrier tracking link as soon as your parcel ships.",
+    "tags": ["track", "order", "package", "shipment", "delivery status", "carrier"]
+  },
+  {
+    "id": "order-cancel",
+    "category": "Orders & Tracking",
+    "question": "Can I cancel or modify my order after placing it?",
+    "alternate_questions": [
+      "How do I cancel my order?",
+      "Can I change the items in my order?",
+      "Is it possible to edit my purchase before shipping?",
+      "Stop my order delivery"
+    ],
+    "answer": "Orders can be canceled or edited within 1 hour of placement directly from your Order History page. After 1 hour, processing begins in the warehouse and changes cannot be made, but you can initiate a free return once received.",
+    "tags": ["cancel", "modify", "edit order", "stop delivery", "change item"]
+  },
+  {
+    "id": "order-change-address",
+    "category": "Orders & Tracking",
+    "question": "Can I change my delivery address after placing an order?",
+    "alternate_questions": [
+      "How do I update my shipping address?",
+      "I entered the wrong address for my order",
+      "Can I change destination location?",
+      "Update delivery location"
+    ],
+    "answer": "You can change your shipping address within 45 minutes of order confirmation in your account. If the order has already been dispatched, please contact our support team immediately so we can request a redirection with the courier.",
+    "tags": ["address", "shipping address", "delivery location", "wrong address"]
+  },
+  {
+    "id": "shipping-times",
+    "category": "Shipping & Delivery",
+    "question": "What are your shipping options and delivery times?",
+    "alternate_questions": [
+      "How long does delivery take?",
+      "What are the delivery estimates?",
+      "Do you have express or next-day shipping?",
+      "When will my package arrive?"
+    ],
+    "answer": "We offer Standard Shipping (3-5 business days), Express Shipping (1-2 business days), and Same-Day Delivery in select metropolitan areas for orders placed before 12:00 PM.",
+    "tags": ["shipping", "delivery time", "standard shipping", "express", "overnight", "same day"]
+  },
+  {
+    "id": "shipping-cost",
+    "category": "Shipping & Delivery",
+    "question": "How much does shipping cost?",
+    "alternate_questions": [
+      "What are your delivery fees?",
+      "Do you offer free shipping?",
+      "Is shipping free on all items?",
+      "How to get free delivery?"
+    ],
+    "answer": "Standard delivery is completely free for all orders over $49. For orders under $49, a flat shipping fee of $4.99 applies. Express shipping is available for $9.99 regardless of order value.",
+    "tags": ["shipping cost", "delivery fee", "free shipping", "shipping rates"]
+  },
+  {
+    "id": "shipping-international",
+    "category": "Shipping & Delivery",
+    "question": "Do you ship internationally outside the country?",
+    "alternate_questions": [
+      "Do you deliver overseas?",
+      "Is worldwide delivery available?",
+      "Can I place an international order?",
+      "Which countries do you deliver to?"
+    ],
+    "answer": "Yes, we ship to over 50 countries worldwide via DHL Express. International delivery takes typically 5 to 10 business days. Import duties, customs, and taxes are calculated and displayed at checkout.",
+    "tags": ["international", "worldwide", "overseas", "global shipping", "customs"]
+  },
+  {
+    "id": "returns-policy",
+    "category": "Returns & Refunds",
+    "question": "What is your return policy?",
+    "alternate_questions": [
+      "How long do I have to return an item?",
+      "Can I return an opened or used product?",
+      "What are the rules for returning products?",
+      "Is there a 30-day return window?"
+    ],
+    "answer": "We offer a 30-day hassle-free return window on most products from the date of delivery. Items must be in their original packaging with all included accessories, manuals, and proof of purchase.",
+    "tags": ["return policy", "30 days", "return window", "packaging", "return item"]
+  },
+  {
+    "id": "returns-how-to",
+    "category": "Returns & Refunds",
+    "question": "How do I initiate a return or replacement?",
+    "alternate_questions": [
+      "How can I return a product?",
+      "Steps to send back an item",
+      "How to get a replacement for a broken item?",
+      "Start a return process"
+    ],
+    "answer": "To start a return, visit our Returns Portal (novatech.com/returns), enter your Order Number and email, select the items you wish to return, and print your prepaid return shipping label.",
+    "tags": ["start return", "initiate return", "replacement", "return label", "prepaid label"]
+  },
+  {
+    "id": "refund-timeline",
+    "category": "Returns & Refunds",
+    "question": "How long does it take to receive a refund?",
+    "alternate_questions": [
+      "When will I get my money back?",
+      "What is the refund processing time?",
+      "How many days for refund to reflect in my bank?",
+      "Where is my refund?"
+    ],
+    "answer": "Once our warehouse receives and inspects your returned item (usually within 2 business days of arrival), refunds are processed to your original payment method within 3 to 5 business days.",
+    "tags": ["refund", "money back", "refund time", "processing refund", "bank credit"]
+  },
+  {
+    "id": "damaged-product",
+    "category": "Returns & Refunds",
+    "question": "What should I do if my item arrives damaged or defective?",
+    "alternate_questions": [
+      "My order arrived broken",
+      "I received a defective product",
+      "The package was damaged during transit",
+      "Product is not working out of the box"
+    ],
+    "answer": "We sincerely apologize! If your package arrived damaged or the product is defective, report it within 48 hours of delivery via our Support Chat or email support@novatech.com with photos of the damaged packaging and item. We will ship a brand-new replacement immediately at zero cost.",
+    "tags": ["damaged", "broken", "defective", "faulty", "transit damage", "replacement"]
+  },
+  {
+    "id": "payments-accepted",
+    "category": "Payments & Billing",
+    "question": "What payment methods do you accept?",
+    "alternate_questions": [
+      "Can I pay with credit card or PayPal?",
+      "Do you take Apple Pay or Google Pay?",
+      "What cards do you support?",
+      "Accepted forms of payment"
+    ],
+    "answer": "We accept all major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Shop Pay. We also offer flexible installments via Klarna and Afterpay.",
+    "tags": ["payment methods", "credit card", "debit card", "paypal", "apple pay", "google pay", "klarna"]
+  },
+  {
+    "id": "payments-emi",
+    "category": "Payments & Billing",
+    "question": "Do you offer installments, financing, or Buy Now Pay Later (BNPL)?",
+    "alternate_questions": [
+      "Can I pay in monthly installments?",
+      "Do you support EMI or split payments?",
+      "How does Klarna or Afterpay work?",
+      "Can I finance my purchase?"
+    ],
+    "answer": "Yes! We partner with Klarna and Affirm to offer 0% APR financing on orders over $150. You can split your purchase into 4 equal bi-weekly interest-free payments or choose monthly payment plans up to 12 months.",
+    "tags": ["installments", "financing", "emi", "buy now pay later", "bnpl", "klarna", "affirm"]
+  },
+  {
+    "id": "payments-security",
+    "category": "Payments & Billing",
+    "question": "Is my payment information safe and secure?",
+    "alternate_questions": [
+      "Are transactions encrypted?",
+      "Do you save my credit card details?",
+      "How secure is the checkout process?",
+      "Is it safe to buy from your website?"
+    ],
+    "answer": "Yes, absolutely. Our checkout is protected by 256-bit SSL encryption and Level 1 PCI-DSS compliant payment gateways. We never store your full card number or CVV on our servers.",
+    "tags": ["secure", "encryption", "safe payment", "pci compliance", "ssl"]
+  },
+  {
+    "id": "warranty-coverage",
+    "category": "Warranty & Support",
+    "question": "What is covered under the product warranty?",
+    "alternate_questions": [
+      "How long is the manufacturer warranty?",
+      "Does warranty cover accidental damage?",
+      "What does warranty include?",
+      "How does warranty work?"
+    ],
+    "answer": "All hardware products sold by NovaTech come with a 1-year standard manufacturer warranty covering manufacturing defects, internal component failures, and hardware malfunctions. Accidental damage, water damage, or unauthorized modifications are excluded unless you purchased NovaTech Care+ Protection.",
+    "tags": ["warranty", "manufacturer warranty", "1 year warranty", "hardware defect", "care plus"]
+  },
+  {
+    "id": "warranty-claim",
+    "category": "Warranty & Support",
+    "question": "How do I claim a warranty repair or replacement?",
+    "alternate_questions": [
+      "How to file a warranty claim?",
+      "My device broke under warranty",
+      "Process to get a warranty replacement",
+      "Submit repair request"
+    ],
+    "answer": "To claim your warranty, visit novatech.com/warranty, enter your device's serial number and invoice number, describe the malfunction, and attach any diagnostic video/photo. Our engineering team reviews claims within 24 hours.",
+    "tags": ["warranty claim", "repair", "replace warranty", "serial number", "broken device"]
+  },
+  {
+    "id": "account-create",
+    "category": "Account & Security",
+    "question": "Do I need an account to place an order?",
+    "alternate_questions": [
+      "Can I checkout as a guest?",
+      "Is an account required to buy?",
+      "Do I have to register to make a purchase?",
+      "Guest checkout option"
+    ],
+    "answer": "No, an account is not required. You can always check out as a guest. However, creating a free account allows you to track shipments easily, save multiple addresses, earn loyalty reward points, and manage returns seamlessly.",
+    "tags": ["guest checkout", "create account", "register", "no account"]
+  },
+  {
+    "id": "account-reset-password",
+    "category": "Account & Security",
+    "question": "How do I reset my account password?",
+    "alternate_questions": [
+      "I forgot my password",
+      "Cannot login to my account",
+      "How to change my login credentials?",
+      "Password reset link"
+    ],
+    "answer": "Click on the 'Sign In' icon at top right, select 'Forgot Password?', and enter your registered email address. We will send you a secure password reset link valid for 30 minutes.",
+    "tags": ["forgot password", "reset password", "login help", "change password"]
+  },
+  {
+    "id": "account-delete",
+    "category": "Account & Security",
+    "question": "How can I delete my account or personal data?",
+    "alternate_questions": [
+      "How to delete my profile?",
+      "Remove all my personal information",
+      "GDPR data deletion request",
+      "Close my account permanently"
+    ],
+    "answer": "Under GDPR and CCPA regulations, you have full ownership of your data. To delete your account and personal history, navigate to Account Settings > Privacy & Data > Delete Account, or submit a request to privacy@novatech.com.",
+    "tags": ["delete account", "privacy", "gdpr", "ccpa", "remove profile"]
+  },
+  {
+    "id": "discounts-coupons",
+    "category": "Discounts & Offers",
+    "question": "How do I apply a promo code or discount coupon?",
+    "alternate_questions": [
+      "Where do I enter a promo code?",
+      "My coupon code is not working",
+      "How to redeem a voucher?",
+      "Apply discount code at checkout"
+    ],
+    "answer": "During checkout on the payment review step, look for the 'Promo / Gift Card' box on the right summary panel. Enter your code and click 'Apply'. Note that only one promo code can be applied per order.",
+    "tags": ["coupon", "promo code", "discount", "voucher", "redeem code"]
+  },
+  {
+    "id": "student-discount",
+    "category": "Discounts & Offers",
+    "question": "Do you offer student, military, or educator discounts?",
+    "alternate_questions": [
+      "Is there a discount for students?",
+      "Military discount availability",
+      "Teacher and healthcare worker discount",
+      "How to verify student status?"
+    ],
+    "answer": "Yes! We offer a 10% discount for verified students, educators, first responders, and military personnel via Student Beans and ID.me. Visit novatech.com/community-discounts to verify your status instantly.",
+    "tags": ["student discount", "military discount", "educator", "id.me", "student beans"]
+  },
+  {
+    "id": "price-match",
+    "category": "Discounts & Offers",
+    "question": "Do you offer a price match guarantee?",
+    "alternate_questions": [
+      "Will you match a lower price from another retailer?",
+      "Do you have price protection?",
+      "What is your price match policy?",
+      "Competitor price matching"
+    ],
+    "answer": "Yes! If you find an identical item sold and shipped by authorized retailers (e.g. Amazon, Best Buy, Walmart) for a lower price within 14 days of purchase, contact us and we will gladly refund the price difference.",
+    "tags": ["price match", "price guarantee", "lower price", "competitor"]
+  },
+  {
+    "id": "support-contact",
+    "category": "General & Support",
+    "question": "How can I contact customer support?",
+    "alternate_questions": [
+      "What is your customer service phone number?",
+      "How do I speak with a human agent?",
+      "What are your support operating hours?",
+      "Customer care email address"
+    ],
+    "answer": "Our customer support team is available 24/7. You can reach us via Live Chat on our website, email at support@novatech.com, or toll-free by phone at 1-800-555-NOVA (Monday through Friday, 8 AM - 8 PM EST).",
+    "tags": ["contact support", "phone number", "email support", "human agent", "customer service"]
+  },
+  {
+    "id": "store-locations",
+    "category": "General & Support",
+    "question": "Do you have physical retail stores I can visit?",
+    "alternate_questions": [
+      "Where are your brick-and-mortar stores?",
+      "Can I buy or pick up in store?",
+      "Find nearest NovaTech store",
+      "Store locator"
+    ],
+    "answer": "Yes, we have 18 flagship stores across major cities including New York, San Francisco, Chicago, Austin, and Seattle. You can check opening hours and inventory or reserve items for in-store pickup at novatech.com/stores.",
+    "tags": ["physical store", "store locator", "in-store pickup", "retail location"]
+  },
+  {
+    "id": "gift-cards",
+    "category": "General & Support",
+    "question": "Can I purchase and use electronic gift cards?",
+    "alternate_questions": [
+      "Do you sell e-gift cards?",
+      "How do I redeem an electronic gift certificate?",
+      "Do gift cards expire?",
+      "Check gift card balance"
+    ],
+    "answer": "Yes, NovaTech e-Gift Cards are available in values from $25 to $500 and are delivered instantly via email. NovaTech gift cards never expire and have no maintenance fees.",
+    "tags": ["gift cards", "e-gift card", "redeem gift card", "balance check"]
+  }
+]

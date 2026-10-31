@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech Support | FAQ AI Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="theme-light">
+  <div class="app-container">
+    <!-- Sidebar / Knowledge Explorer -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <div class="brand-icon">⚡</div>
+          <div class="brand-text">
+            <h2>NovaTech</h2>
+            <span>Support Intelligence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Knowledge Base</h3>
+        <div class="stats-card">
+          <div class="stat-item">
+            <span class="stat-num" id="stat-faq-count">{{ faq_count }}</span>
+            <span class="stat-label">FAQs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">{{ categories|length }}</span>
+            <span class="stat-label">Categories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">TF-IDF</span>
+            <span class="stat-label">Cosine Sim</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section categories-section">
+        <h3>Categories</h3>
+        <div class="category-list">
+          {% for cat in categories %}
+          <button class="category-btn" data-category="{{ cat }}">
+            <span class="cat-bullet">•</span>
+            <span class="cat-name">{{ cat }}</span>
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="nlp-badge">
+          <span class="pulse-dot"></span>
+          <span>NLTK & Cosine Similarity Active</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <div class="header-left">
+          <button class="mobile-toggle" id="sidebarToggle" aria-label="Toggle Sidebar">
+            ☰
+          </button>
+          <div class="bot-avatar-header">
+            <span>🤖</span>
+            <span class="status-indicator online"></span>
+          </div>
+          <div class="header-info">
+            <h1>NovaTech Assistant</h1>
+            <p class="subtitle">AI FAQ & Customer Care Bot • Instant Answers</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="action-btn" id="btnBrowseFaqs" title="Browse all FAQs">
+            📖 Browse FAQs
+          </button>
+          <button class="action-btn" id="btnClearChat" title="Clear Conversation">
+            🗑️ Clear
+          </button>
+          <button class="action-btn theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+            🌙
+          </button>
+        </div>
+      </header>
+
+      <!-- Messages Stream -->
+      <section class="messages-container" id="messagesContainer">
+        <!-- Bot Welcome Card -->
+        <div class="message-row bot-row">
+          <div class="msg-avatar">🤖</div>
+          <div class="message-bubble bot-bubble">
+            <div class="bubble-header">
+              <span class="sender-name">NovaTech Assistant</span>
+              <span class="msg-time">Just now</span>
+            </div>
+            <div class="bubble-text">
+              <p>Hi there! 👋 Welcome to NovaTech Support. I'm trained with Natural Language Processing to answer your product, order, return, and warranty questions.</p>
+              <p>How can I assist you today? Try clicking any question below or type your own:</p>
+            </div>
+            <div class="quick-chips">
+              {% for pq in popular_questions %}
+              <button class="chip-btn" data-query="{{ pq }}">{{ pq }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-bubble">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <span class="typing-label">NovaTech Assistant is thinking...</span>
+      </div>
+
+      <!-- Quick Topics Bar -->
+      <div class="topics-bar">
+        <span class="topics-title">Common queries:</span>
+        <button class="topic-pill" data-query="How can I track my order status?">📦 Track Order</button>
+        <button class="topic-pill" data-query="What is your return policy?">🔄 Return Policy</button>
+        <button class="topic-pill" data-query="What payment methods do you accept?">💳 Payments</button>
+        <button class="topic-pill" data-query="What is covered under the product warranty?">🛡️ Warranty</button>
+        <button class="topic-pill" data-query="How can I contact customer support?">📞 Contact Support</button>
+      </div>
+
+      <!-- Input Bar -->
+      <footer class="chat-input-area">
+        <form id="chatForm" class="chat-form">
+          <input
+            type="text"
+            id="chatInput"
+            class="chat-input"
+            placeholder="Type your question here (e.g., 'How long does shipping take?')..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="btnSend" class="send-btn" aria-label="Send Message">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+      </footer>
+    </main>
+  </div>
+
+  <!-- FAQ Knowledge Modal -->
+  <div class="modal-backdrop" id="faqModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Knowledge Base Explorer</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-search">
+        <input type="text" id="modalSearchInput" placeholder="Search FAQs by keyword...">
+      </div>
+      <div class="modal-body" id="modalFaqList">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
